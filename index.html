@@ -4,235 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milan Bhandari | Social Links</title>
-    <style>
-        :root {
-            --bg-light: #f8f8f8;
-            --text-light: #222222;
-            --link-light: #ffffff;
-            --link-bg-light: #222222;
-            --bg-dark: #121212;
-            --text-dark: #f0f0f0;
-            --link-dark: #121212;
-            --link-bg-dark: #f0f0f0;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-light);
-            text-align: center;
-            margin: 0;
-            padding: 2rem 1rem;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            line-height: 1.6;
-        }
-        
-        body.dark-mode {
-            background-color: var(--bg-dark);
-            color: var(--text-dark);
-        }
-        
-        .header {
-            margin-bottom: 2.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            max-width: 800px;
-        }
-        
-        .profile-img {
-            width: 8.75rem;
-            height: 8.75rem;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid currentColor;
-            margin-bottom: 1.25rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-        
-        h1 {
-            font-size: clamp(1.75rem, 5vw, 2.5rem);
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.5px;
-        }
-        
-        .tagline {
-            font-size: clamp(1rem, 3vw, 1.1rem);
-            opacity: 0.9;
-            max-width: 36rem;
-            margin: 0 auto 1.875rem;
-            font-weight: 400;
-            padding: 0 1rem;
-        }
-        
-        .links {
-            width: 100%;
-            max-width: 25rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.9375rem;
-            margin-bottom: 2.5rem;
-        }
-        
-        .link {
-            background-color: var(--link-bg-light);
-            color: var(--link-light);
-            padding: 1rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            border: 1px solid transparent;
-            width: 100%;
-        }
-        
-        .dark-mode .link {
-            background-color: var(--link-bg-dark);
-            color: var(--link-dark);
-        }
-        
-        .link:hover {
-            transform: translateY(-0.1875rem);
-            box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.1);
-            border-color: currentColor;
-        }
-        
-        .dark-mode .link:hover {
-            box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.3);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1.25rem;
-            margin-bottom: 1.875rem;
-        }
-        
-        .social-link {
-            color: inherit;
-            font-size: 1.4rem;
-            opacity: 0.8;
-            transition: all 0.3s ease;
-        }
-        
-        .social-link:hover {
-            opacity: 1;
-            transform: translateY(-0.125rem);
-        }
-        
-        footer {
-            font-size: 0.9rem;
-            opacity: 0.7;
-            margin-top: 1.25rem;
-        }
-        
-        .theme-toggle {
-            position: fixed;
-            top: 1.5625rem;
-            right: 1.5625rem;
-            background: none;
-            border: none;
-            color: inherit;
-            font-size: 1.4rem;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: all 0.3s ease;
-            z-index: 100;
-        }
-        
-        .theme-toggle:hover {
-            opacity: 1;
-            transform: rotate(15deg);
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            body {
-                padding: 1.5rem 1rem;
-            }
-            
-            .header {
-                margin-bottom: 2rem;
-            }
-            
-            .profile-img {
-                width: 7.5rem;
-                height: 7.5rem;
-            }
-            
-            .links {
-                gap: 0.75rem;
-                margin-bottom: 2rem;
-            }
-            
-            .link {
-                padding: 0.875rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            body {
-                padding: 1.25rem 0.75rem;
-            }
-            
-            .profile-img {
-                width: 6.5rem;
-                height: 6.5rem;
-            }
-            
-            .links {
-                max-width: 100%;
-            }
-            
-            .social-links {
-                gap: 1rem;
-            }
-        }
-        
-        /* For very large screens */
-        @media (min-width: 1600px) {
-            .header {
-                max-width: 900px;
-            }
-            
-            .links {
-                max-width: 30rem;
-            }
-            
-            .profile-img {
-                width: 10rem;
-                height: 10rem;
-            }
-            
-            h1 {
-                font-size: 3rem;
-            }
-            
-            .tagline {
-                font-size: 1.25rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -240,13 +12,13 @@
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <i class="fas fa-moon"></i>
     </button>
-    
+
     <div class="header">
         <img src="https://i.ibb.co/mrF1nDsV/IMG-20250307-201836-868.jpg" alt="Milan Bhandari" class="profile-img">
         <h1>Milan Bhandari</h1>
         <p class="tagline">Full Stack Developer | Open Source Contributor | Tech Educator</p>
     </div>
-    
+
     <div class="links">
         <a href="https://www.facebook.com/milancodes" class="link" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-facebook"></i> Facebook Profile 
@@ -264,7 +36,7 @@
             <i class="fab fa-instagram"></i> Instagram Profile
         </a>
     </div>
-    
+
     <div class="social-links">
         <a href="https://twitter.com/yourhandle" class="social-link" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-twitter"></i>
@@ -279,47 +51,10 @@
             <i class="fab fa-instagram"></i>
         </a>
     </div>
-    
+
     <footer>
         © <span id="year"></span> Milan Bhandari. All rights reserved.
     </footer>
-
-    <script>
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-        const icon = themeToggle.querySelector('i');
-        
-        const savedTheme = localStorage.getItem('theme') || 
-                           (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        
-        if (savedTheme === 'dark') {
-            body.classList.add('dark-mode');
-            icon.classList.replace('fa-moon', 'fa-sun');
-        }
-        
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            
-            if (body.classList.contains('dark-mode')) {
-                icon.classList.replace('fa-moon', 'fa-sun');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                icon.classList.replace('fa-sun', 'fa-moon');
-                localStorage.setItem('theme', 'light');
-            }
-        });
-        
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            const elements = document.querySelectorAll('.header, .links, .social-links, footer');
-            elements.forEach((el, i) => {
-                setTimeout(() => {
-                    el.style.opacity = '1';
-                    el.style.transform = 'translateY(0)';
-                }, 100 * i);
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
